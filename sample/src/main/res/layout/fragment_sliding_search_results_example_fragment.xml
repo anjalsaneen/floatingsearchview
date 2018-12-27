@@ -28,16 +28,26 @@
             android:id="@+id/floating_search_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:floatingSearch_dismissOnOutsideTouch="true"
-            app:floatingSearch_leftActionMode="showHamburger"
-            app:floatingSearch_menu="@menu/menu_search_view"
-            app:floatingSearch_searchBarMarginLeft="@dimen/search_view_inset"
-            app:floatingSearch_searchBarMarginRight="@dimen/search_view_inset"
-            app:floatingSearch_searchBarMarginTop="@dimen/search_view_inset"
-            app:floatingSearch_searchHint="Search..."
-            app:floatingSearch_showSearchKey="true"
-            app:floatingSearch_suggestionsListAnimDuration="250"
+            android:layout_weight="1"
             app:floatingSearch_dimBackground="false"
-            app:floatingSearch_close_search_on_keyboard_dismiss="false"/>
+            app:floatingSearch_cursorColor="@color/black"
+            app:floatingSearch_leftActionMode="showSearch"
+            app:floatingSearch_searchHint="Search...." />
+
+        <!--<com.arlib.floatingsearchview.FloatingSearchView-->
+            <!--android:id="@+id/floating_search_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:floatingSearch_dismissOnOutsideTouch="true"-->
+            <!--app:floatingSearch_leftActionMode="showHamburger"-->
+            <!--app:floatingSearch_menu="@menu/menu_search_view"-->
+            <!--app:floatingSearch_searchBarMarginLeft="@dimen/search_view_inset"-->
+            <!--app:floatingSearch_searchBarMarginRight="@dimen/search_view_inset"-->
+            <!--app:floatingSearch_searchBarMarginTop="@dimen/search_view_inset"-->
+            <!--app:floatingSearch_searchHint="Search..."-->
+            <!--app:floatingSearch_showSearchKey="true"-->
+            <!--app:floatingSearch_suggestionsListAnimDuration="250"-->
+            <!--app:floatingSearch_dimBackground="false"-->
+            <!--app:floatingSearch_close_search_on_keyboard_dismiss="false"/>-->
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

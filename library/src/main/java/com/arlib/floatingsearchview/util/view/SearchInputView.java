@@ -1,10 +1,16 @@
 package com.arlib.floatingsearchview.util.view;
 
 import android.content.Context;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import java.lang.reflect.Field;
 
 public class SearchInputView extends EditText {
 

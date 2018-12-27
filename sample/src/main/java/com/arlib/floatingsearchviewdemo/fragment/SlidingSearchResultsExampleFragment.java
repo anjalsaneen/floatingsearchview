@@ -3,6 +3,7 @@ package com.arlib.floatingsearchviewdemo.fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -58,6 +59,8 @@ public class SlidingSearchResultsExampleFragment extends BaseExampleFragment {
         super.onViewCreated(view, savedInstanceState);
         mSearchView = (FloatingSearchView) view.findViewById(R.id.floating_search_view);
         mSearchResultsList = (RecyclerView) view.findViewById(R.id.search_results_list);
+
+        mSearchView.setCursorColor(R.color.black);
 
         setupFloatingSearch();
         setupResultsList();
