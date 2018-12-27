@@ -76,7 +76,7 @@ public class SearchInputView extends EditText {
             mOnKeyboardDismissedListener.onKeyboardDismissed();
         }
         return super.onKeyPreIme(keyCode, ev);
-    }=
+    }
 
     public void setOnKeyboardDismissedListener(OnKeyboardDismissedListener onKeyboardDismissedListener) {
         mOnKeyboardDismissedListener = onKeyboardDismissedListener;
