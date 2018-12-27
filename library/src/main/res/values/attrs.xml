@@ -38,6 +38,5 @@
         <attr name="floatingSearch_dividerColor" format="color"/>
         <attr name="floatingSearch_dimBackground" format="boolean"/>
         <attr name="floatingSearch_suggestionRightIconColor" format="color"/>
-        <attr name="floatingSearch_cursorColor" format="color" />
     </declare-styleable>
 </resources>

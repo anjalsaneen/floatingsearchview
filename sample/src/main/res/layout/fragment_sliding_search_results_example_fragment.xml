@@ -28,10 +28,7 @@
             android:id="@+id/floating_search_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:cardCornerRadius="20dp"
             app:floatingSearch_dimBackground="false"
-            app:floatingSearch_cursorColor="@color/black"
             app:floatingSearch_leftActionMode="showSearch"
             app:floatingSearch_searchHint="Search...." />
 

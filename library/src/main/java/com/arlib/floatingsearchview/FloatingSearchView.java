@@ -544,8 +544,6 @@ public class FloatingSearchView extends FrameLayout {
                     , Util.getColor(getContext(), R.color.hint_color)));
             setSuggestionRightIconColor(a.getColor(R.styleable.FloatingSearchView_floatingSearch_suggestionRightIconColor
                     , Util.getColor(getContext(), R.color.gray_active_icon)));
-            mSearchInput.setCursorColor(a.getColor(R.styleable.FloatingSearchView_floatingSearch_cursorColor
-                    , Util.getColor(getContext(), R.color.gray_active_icon)));
         } finally {
             a.recycle();
         }
