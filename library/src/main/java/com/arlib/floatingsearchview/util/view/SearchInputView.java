@@ -42,13 +42,41 @@ public class SearchInputView extends EditText {
         setOnKeyListener(mOnKeyListener);
     }
 
+    public void setCursorColor(int color) {
+        try {
+            // Get the cursor resource id
+            Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
+            field.setAccessible(true);
+            int drawableResId = field.getInt(this);
+
+            // Get the editor
+            field = TextView.class.getDeclaredField("mEditor");
+            field.setAccessible(true);
+            Object editor = field.get(this);
+
+            // Get the drawable and set a color filter
+            Drawable drawable = ContextCompat.getDrawable(this.getContext(), drawableResId);
+            drawable.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+            Drawable[] drawables = {drawable, drawable};
+
+            // Set the drawables
+            field = editor.getClass().getDeclaredField("mCursorDrawable");
+            field.setAccessible(true);
+            field.set(editor, drawables);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public boolean onKeyPreIme(int keyCode, KeyEvent ev) {
         if (ev.getKeyCode() == KeyEvent.KEYCODE_BACK && mOnKeyboardDismissedListener != null) {
             mOnKeyboardDismissedListener.onKeyboardDismissed();
         }
         return super.onKeyPreIme(keyCode, ev);
-    }
+    }=
 
     public void setOnKeyboardDismissedListener(OnKeyboardDismissedListener onKeyboardDismissedListener) {
         mOnKeyboardDismissedListener = onKeyboardDismissedListener;
